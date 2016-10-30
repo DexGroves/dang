@@ -10,7 +10,7 @@ dang(...)
 \item{...}{Either a single unnamed argument or a series of named arguments.}
 }
 \description{
-Call without one unnamed argument to replace the old calling function with
+Call with one unnamed argument to replace the old calling function with
 the new argument. Call with one or more named arguments to replace or
 inject new arguments into the last call.
 }

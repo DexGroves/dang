@@ -1,6 +1,6 @@
 #' Fix errors in the last command in the history.
 #'
-#' Call without one unnamed argument to replace the old calling function with
+#' Call with one unnamed argument to replace the old calling function with
 #' the new argument. Call with one or more named arguments to replace or
 #' inject new arguments into the last call.
 #'
@@ -29,7 +29,7 @@ dang <- function(...) {
   } else {
     hist_call <- new_named_arguments(hist_call, args)
   }
-
+  print(hist_call)
   eval.parent(hist_call)
 }
 
