@@ -2,20 +2,24 @@
 % Please edit documentation in R/dang.R
 \name{dang}
 \alias{dang}
-\title{Execute the last command with a new function, but the same arguments.}
+\title{Fix errors in the last command in the history.}
 \usage{
-dang(new_fn)
+dang(...)
 }
 \arguments{
-\item{new_fn}{Raw new function with which to evaluate the old arguments.}
+\item{...}{Either a single unnamed argument or a series of named arguments.}
 }
 \description{
-You mistyped it, but don't want to up-arrow, ctrl+a, delete. dang!
+Call without one unnamed argument to replace the old calling function with
+the new argument. Call with one or more named arguments to replace or
+inject new arguments into the last call.
 }
 \examples{
-> pritn("Hello world!")
+pritn("Hello world!")
 # Error: could not find function "pritn"
-> dang(print)
-# [1] "Hello world!"
+dang(print)
+
+sample(letters, size = 26, replace = FALSE)
+dang(replace = TRUE)
 }
 
