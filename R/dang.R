@@ -29,7 +29,7 @@ dang <- function(...) {
   } else {
     hist_call <- new_named_arguments(hist_call, args)
   }
-  print(hist_call)
+
   eval.parent(hist_call)
 }
 
